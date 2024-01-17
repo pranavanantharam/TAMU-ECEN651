@@ -1,0 +1,31 @@
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALUControlTest_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 7931.559 ; gain = 7.000 ; free physical = 396 ; free virtual = 3834
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+                  SLL Instruction passed
+                  SRL Instruction passed
+                  SRA Instruction passed
+                  ADD Instruction passed
+                 ADDU Instruction passed
+                  SUB Instruction passed
+                 SUBU Instruction passed
+                  AND Instruction passed
+                   OR Instruction passed
+                  XOR Instruction passed
+                  NOR Instruction passed
+                  SLT Instruction passed
+                 SLTU Instruction passed
+                 ANDI Instruction passed
+                  ORI Instruction passed
+                 ADDI Instruction passed
+                 SUBI Instruction passed
+                 SLTI Instruction passed
+                ADDIU Instruction passed
+                SUBIU Instruction passed
+                 XORI Instruction passed
+                 SLTU Instruction passed
+                 NORI Instruction passed
+                  LUI Instruction passed
+All tests passed

@@ -1,0 +1,226 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Sep 29 15:33:35 2023
+# Process ID: 14413
+# Current directory: /home/grads/p/pranav_anantharam/lab4_control/project_2/project_2.runs/synth_1
+# Command line: vivado -log ALUControl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALUControl.tcl
+# Log file: /home/grads/p/pranav_anantharam/lab4_control/project_2/project_2.runs/synth_1/ALUControl.vds
+# Journal file: /home/grads/p/pranav_anantharam/lab4_control/project_2/project_2.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source ALUControl.tcl -notrace
+Command: synth_design -top ALUControl -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-1540] The version limit for your license is '2021.02' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14496 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1420.195 ; gain = 88.000 ; free physical = 396 ; free virtual = 3733
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ALUControl' [/home/grads/p/pranav_anantharam/lab4_control/ALUControl.v:19]
+INFO: [Synth 8-256] done synthesizing module 'ALUControl' (1#1) [/home/grads/p/pranav_anantharam/lab4_control/ALUControl.v:19]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.742 ; gain = 129.547 ; free physical = 323 ; free virtual = 3761
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1461.742 ; gain = 129.547 ; free physical = 317 ; free virtual = 3759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1469.734 ; gain = 137.539 ; free physical = 315 ; free virtual = 3760
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1477.742 ; gain = 145.547 ; free physical = 296 ; free virtual = 3752
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ALUControl 
+Detailed RTL Component Info : 
++---Muxes : 
+	  15 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 273 ; free virtual = 3436
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 271 ; free virtual = 3436
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:02:35 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 270 ; free virtual = 3435
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 268 ; free virtual = 3437
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 268 ; free virtual = 3436
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 267 ; free virtual = 3436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 267 ; free virtual = 3436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 267 ; free virtual = 3436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 267 ; free virtual = 3436
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT4 |     1|
+|2     |LUT5 |     5|
+|3     |LUT6 |     1|
+|4     |IBUF |     9|
+|5     |OBUF |     4|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    20|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 267 ; free virtual = 3436
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 264 ; free virtual = 3439
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:02:36 . Memory (MB): peak = 1744.027 ; gain = 411.832 ; free physical = 263 ; free virtual = 3446
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:02:39 . Memory (MB): peak = 1882.164 ; gain = 604.723 ; free physical = 235 ; free virtual = 3391
+INFO: [Common 17-1381] The checkpoint '/home/grads/p/pranav_anantharam/lab4_control/project_2/project_2.runs/synth_1/ALUControl.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ALUControl_utilization_synth.rpt -pb ALUControl_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.38 . Memory (MB): peak = 1906.188 ; gain = 0.000 ; free physical = 217 ; free virtual = 3390
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 29 15:36:33 2023...
+

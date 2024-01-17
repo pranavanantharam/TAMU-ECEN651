@@ -1,0 +1,43 @@
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab4_control/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALUControlTest_v_behav -key {Behavioral:sim_1:Functional:ALUControlTest_v} -tclbatch {ALUControlTest_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source ALUControlTest_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+                  SLL Instruction passed
+                  SRL Instruction passed
+                  SRA Instruction passed
+                  ADD Instruction passed
+                 ADDU Instruction passed
+                  SUB Instruction passed
+                 SUBU Instruction passed
+                  AND Instruction passed
+                   OR Instruction passed
+                  XOR Instruction passed
+                  NOR Instruction passed
+                  SLT Instruction passed
+                 SLTU Instruction passed
+                 ANDI Instruction passed
+                  ORI Instruction passed
+                 ADDI Instruction passed
+                 SUBI Instruction passed
+                 SLTI Instruction passed
+                ADDIU Instruction passed
+                SUBIU Instruction passed
+                 XORI Instruction passed
+                 SLTU Instruction passed
+                 NORI Instruction passed
+                  LUI Instruction passed
+All tests passed

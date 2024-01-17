@@ -1,0 +1,131 @@
+start_gui
+create_project lab1 /home/grads/p/pranav_anantharam/lab1 -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2017.4/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 6239.285 ; gain = 43.031 ; free physical = 577 ; free virtual = 17740
+file mkdir /home/grads/p/pranav_anantharam/lab1/lab1.srcs/sources_1/new
+set_property simulator_language Verilog [current_project]
+close [ open /home/grads/p/pranav_anantharam/lab1/lab1.srcs/sources_1/new/rcc.v w ]
+add_files /home/grads/p/pranav_anantharam/lab1/lab1.srcs/sources_1/new/rcc.v
+update_compile_order -fileset sources_1
+file mkdir /home/grads/p/pranav_anantharam/lab1/lab1.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/grads/p/pranav_anantharam/lab1/lab1.srcs/sim_1/new/rcc_tb.v w ]
+add_files -fileset sim_1 /home/grads/p/pranav_anantharam/lab1/lab1.srcs/sim_1/new/rcc_tb.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'stimulus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab1/lab1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj stimulus_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab1/lab1.srcs/sources_1/new/rcc.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RCC
+INFO: [VRFC 10-311] analyzing module T_FF
+INFO: [VRFC 10-311] analyzing module D_FF
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab1/lab1.srcs/sim_1/new/rcc_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module stimulus
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab1/lab1.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab1/lab1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto be0283f852264c01a1c54c92f72d3120 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot stimulus_behav xil_defaultlib.stimulus xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.D_FF
+Compiling module xil_defaultlib.T_FF
+Compiling module xil_defaultlib.RCC
+Compiling module xil_defaultlib.stimulus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot stimulus_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/grads/p/pranav_anantharam/lab1/lab1.sim/sim_1/behav/xsim/xsim.dir/stimulus_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep  8 14:53:21 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab1/lab1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "stimulus_behav -key {Behavioral:sim_1:Functional:stimulus} -tclbatch {stimulus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source stimulus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+                   0 Clk 0, Output q =  0
+                   5 Clk 1, Output q =  0
+                  10 Clk 0, Output q =  0
+                  15 Clk 1, Output q =  0
+                  20 Clk 0, Output q =  1
+                  25 Clk 1, Output q =  1
+                  30 Clk 0, Output q =  2
+                  35 Clk 1, Output q =  2
+                  40 Clk 0, Output q =  3
+                  45 Clk 1, Output q =  3
+                  50 Clk 0, Output q =  4
+                  55 Clk 1, Output q =  4
+                  60 Clk 0, Output q =  5
+                  65 Clk 1, Output q =  5
+                  70 Clk 0, Output q =  6
+                  75 Clk 1, Output q =  6
+                  80 Clk 0, Output q =  7
+                  85 Clk 1, Output q =  7
+                  90 Clk 0, Output q =  8
+                  95 Clk 1, Output q =  8
+                 100 Clk 0, Output q =  9
+                 105 Clk 1, Output q =  9
+                 110 Clk 0, Output q = 10
+                 115 Clk 1, Output q = 10
+                 120 Clk 0, Output q = 11
+                 125 Clk 1, Output q = 11
+                 130 Clk 0, Output q = 12
+                 135 Clk 1, Output q = 12
+                 140 Clk 0, Output q = 13
+                 145 Clk 1, Output q = 13
+                 150 Clk 0, Output q = 14
+                 155 Clk 1, Output q = 14
+                 160 Clk 0, Output q = 15
+                 165 Clk 1, Output q = 15
+                 170 Clk 0, Output q =  0
+                 175 Clk 1, Output q =  0
+                 180 Clk 0, Output q =  1
+                 185 Clk 1, Output q =  1
+                 190 Clk 0, Output q =  2
+                 195 Clk 1, Output q =  0
+                 200 Clk 0, Output q =  0
+                 205 Clk 1, Output q =  0
+                 210 Clk 0, Output q =  1
+                 215 Clk 1, Output q =  1
+                 220 Clk 0, Output q =  2
+$finish called at time : 225 ns : File "/home/grads/p/pranav_anantharam/lab1/lab1.srcs/sim_1/new/rcc_tb.v" Line 41
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'stimulus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 6423.035 ; gain = 68.699 ; free physical = 177 ; free virtual = 17016
+

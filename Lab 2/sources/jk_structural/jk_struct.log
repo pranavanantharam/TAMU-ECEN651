@@ -1,0 +1,504 @@
+start_gui
+open_project /home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2017.4/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'JKTest_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj JKTest_v_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 8de95a2948984be69336e07a71455a04 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot JKTest_v_behav xil_defaultlib.JKTest_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "JKTest_v_behav -key {Behavioral:sim_1:Functional:JKTest_v} -tclbatch {JKTest_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source JKTest_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              290000 :              Set passed
+              480000 :         Toggle 1 passed
+              670000 :           Hold 1 passed
+              860000 :         Toggle 2 passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'JKTest_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+              290000 :              Set passed
+              480000 :         Toggle 1 passed
+              670000 :           Hold 1 passed
+              860000 :         Toggle 2 passed
+             1050000 :           Hold 2 passed
+             1240000 :            Reset passed
+All tests passed
+create_project project_2 /home/grads/p/pranav_anantharam/lab2_2a/project_2 -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2017.4/data/ip'.
+set_property simulator_language Verilog [current_project]
+add_files -norecurse {/home/grads/p/pranav_anantharam/lab2_2a/JK.v /home/grads/p/pranav_anantharam/lab2_2a/JKTest_v.v}
+update_compile_order -fileset sources_1
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_2a/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'JKTest_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_2a/project_2/project_2.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj JKTest_v_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_2a/JK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JK
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_2a/JKTest_v.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JKTest_v
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_2a/project_2/project_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_2a/project_2/project_2.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto aa34b78460f84f7aaa768924524dcd59 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot JKTest_v_behav xil_defaultlib.JKTest_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.JK
+Compiling module xil_defaultlib.JKTest_v
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot JKTest_v_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/grads/p/pranav_anantharam/lab2_2a/project_2/project_2.sim/sim_1/behav/xsim/xsim.dir/JKTest_v_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 15 15:14:58 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_2a/project_2/project_2.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "JKTest_v_behav -key {Behavioral:sim_1:Functional:JKTest_v} -tclbatch {JKTest_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source JKTest_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              290000 :              Set passed
+              480000 :         Toggle 1 passed
+              670000 :           Hold 1 passed
+              860000 :         Toggle 2 passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'JKTest_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+              290000 :              Set passed
+              480000 :         Toggle 1 passed
+              670000 :           Hold 1 passed
+              860000 :         Toggle 2 passed
+             1050000 :           Hold 2 passed
+             1240000 :            Reset passed
+All tests passed
+create_project project_3 /home/grads/p/pranav_anantharam/lab2_2b/project_3 -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2017.4/data/ip'.
+set_property simulator_language Verilog [current_project]
+add_files -norecurse {/home/grads/p/pranav_anantharam/lab2_2b/DTest_v.v /home/grads/p/pranav_anantharam/lab2_2b/D.v}
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_2b/project_3/project_3.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'DTest_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_2b/project_3/project_3.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj DTest_v_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_2b/D.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module D
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_2b/DTest_v.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DTest_v
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_2b/project_3/project_3.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_2b/project_3/project_3.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto ebaeb418b6c445b69465343837c06aa3 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot DTest_v_behav xil_defaultlib.DTest_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.D
+Compiling module xil_defaultlib.DTest_v
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot DTest_v_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/grads/p/pranav_anantharam/lab2_2b/project_3/project_3.sim/sim_1/behav/xsim/xsim.dir/DTest_v_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 15 15:19:16 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_2b/project_3/project_3.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "DTest_v_behav -key {Behavioral:sim_1:Functional:DTest_v} -tclbatch {DTest_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source DTest_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              290000 :            Set 1 passed
+              480000 :           Hold 1 passed
+              670000 :            Reset passed
+              860000 :           Hold 2 passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'DTest_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+              290000 :            Set 1 passed
+              480000 :           Hold 1 passed
+              670000 :            Reset passed
+              860000 :           Hold 2 passed
+             1050000 :            Set 2 passed
+All tests passed
+create_project project_4 /home/grads/p/pranav_anantharam/lab2_3/project_4 -part xc7vx485tffg1157-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/coe/Xilinx/Vivado/2017.4/data/ip'.
+set_property simulator_language Verilog [current_project]
+add_files -norecurse {/home/grads/p/pranav_anantharam/lab2_3/Decode24Test.v /home/grads/p/pranav_anantharam/lab2_3/Decode24.v}
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Decode24Test_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj Decode24Test_v_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/Decode24.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode24
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/Decode24Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode24Test_v
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto eaad4ec49e144fccb6fb0e0ff568eccd --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Decode24Test_v_behav xil_defaultlib.Decode24Test_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/grads/p/pranav_anantharam/lab2_3/Decode24.v" Line 1. Module Decode24 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Decode24
+Compiling module xil_defaultlib.Decode24Test_v
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Decode24Test_v_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source /home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim/xsim.dir/Decode24Test_v_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Sep 15 15:22:13 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Decode24Test_v_behav -key {Behavioral:sim_1:Functional:Decode24Test_v} -tclbatch {Decode24Test_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source Decode24Test_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              200000 :          Input 0 passed
+              300000 :          Input 1 passed
+              400000 :          Input 2 passed
+              500000 :          Input 3 passed
+All tests passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Decode24Test_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 6706.523 ; gain = 73.660 ; free physical = 2305 ; free virtual = 17111
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+              200000 :          Input 0 passed
+              300000 :          Input 1 passed
+              400000 :          Input 2 passed
+              500000 :          Input 3 passed
+All tests passed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Decode24Test_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj Decode24Test_v_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/Decode24.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode24
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/Decode24Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode24Test_v
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto eaad4ec49e144fccb6fb0e0ff568eccd --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Decode24Test_v_behav xil_defaultlib.Decode24Test_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/grads/p/pranav_anantharam/lab2_3/Decode24.v" Line 1. Module Decode24 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Decode24
+Compiling module xil_defaultlib.Decode24Test_v
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Decode24Test_v_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Decode24Test_v_behav -key {Behavioral:sim_1:Functional:Decode24Test_v} -tclbatch {Decode24Test_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source Decode24Test_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              200000 :          Input 0 passed
+              300000 :          Input 1 passed
+              400000 :          Input 2 passed
+              500000 :          Input 3 passed
+All tests passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Decode24Test_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+              200000 :          Input 0 passed
+              300000 :          Input 1 passed
+              400000 :          Input 2 passed
+              500000 :          Input 3 passed
+All tests passed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Decode24Test_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj Decode24Test_v_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/Decode24.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode24
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/grads/p/pranav_anantharam/lab2_3/Decode24Test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decode24Test_v
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto eaad4ec49e144fccb6fb0e0ff568eccd --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Decode24Test_v_behav xil_defaultlib.Decode24Test_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/grads/p/pranav_anantharam/lab2_3/Decode24.v" Line 1. Module Decode24 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Decode24
+Compiling module xil_defaultlib.Decode24Test_v
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Decode24Test_v_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_3/project_4/project_4.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Decode24Test_v_behav -key {Behavioral:sim_1:Functional:Decode24Test_v} -tclbatch {Decode24Test_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source Decode24Test_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              100000 :          Input 0 passed
+              200000 :          Input 1 passed
+              300000 :          Input 2 passed
+              400000 :          Input 3 passed
+All tests passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Decode24Test_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+current_project project_1
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+ERROR: [Vivado 12-1501] Simulator for snapshot 'Behavioral:sim_1:Functional:JKTest_v' is already running. To launch simulation, change the snapshot name in the simulation fileset settings or close the current simulation.
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'JKTest_v' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj JKTest_v_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/coe/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto 8de95a2948984be69336e07a71455a04 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot JKTest_v_behav xil_defaultlib.JKTest_v xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running fuse with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    C_INCLUDE_PATH
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/grads/p/pranav_anantharam/lab2_1/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "JKTest_v_behav -key {Behavioral:sim_1:Functional:JKTest_v} -tclbatch {JKTest_v.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source JKTest_v.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+              290000 :              Set passed
+              480000 :         Toggle 1 passed
+              670000 :           Hold 1 passed
+              860000 :         Toggle 2 passed
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'JKTest_v_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+              290000 :              Set passed
+              480000 :         Toggle 1 passed
+              670000 :           Hold 1 passed
+              860000 :         Toggle 2 passed
+             1050000 :           Hold 2 passed
+             1240000 :            Reset passed
+All tests passed
+
